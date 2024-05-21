@@ -126,7 +126,7 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
           
-            <img src="" alt="Image of your project" class="img-fluid">
+            <img src="images/SudokuPicture.png" alt="Image of your project" class="img-fluid">
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
@@ -134,18 +134,48 @@
               <h3>Sudoku Generator</h3>
               <p>
                My motivation for working on this project was gaining experience in object-oriented-programming and project design.
+                Along with this, I think that my excitement for application creation helped in the learning process. Although the
+                project seemed daunting because of the complexity and amount of effort it required, I knew that my interest in learning
+                graphical user interfaces would increase my drive. I think that all these motivating factors are what helped my group and I
+                give our full effort in the trial and error process of project design. Overall, I initially start this project thinking
+                that my curiosity in application design would be satisfied, however, once completing it I believe that it has grown even more.
               </p>
               <p>
               The project generates a random Sudoku puzzle based on difficulty and allows that user to
-                solve that puzzle for themselves.
+                solve that puzzle for themselves. Feedback is given when the user checks the puzzle, which can help
+                with finding mistakes, or determining the right answer.
               </p>
               <p>
-              The project was programmed in Java and used Swing. The design involved an Sudoku interface extending
-                to subclasses for each part of the board. There are other separate classes that handled the GUI and solver.
+              The project was programmed in Java and used a user interface (UI) called Java Swing. The design involved multiple
+                object-oriented concepts such as inheritance, encapsulation, polymorphism, test-driven-development and design patterns. Our design
+                involved two interfaces, the BoardInterface and DashboardState interface. The BoardInterface provided methods that
+                were implemented by the Board class, which then was inherited by its children, the rows, columns, blocks, and cells class.
+                The GUI was created based on the State Design Pattern in which an object's internal state changes its behavior.
+                The object changing the states of the UI is the Dashboard class. The DashboardState interface contains the methods implemented in
+                each state class such as the MainMenuState, DifficultyState, and SudokuBoardState. The Dashboard manages these states and
+                uses a function to change from one state to another, therefore changing the window that is displayed in the UI. Lastly, the Simulator
+                class runs the whole program by providing functions to read in .csv files and to execute the initial UI window (Main Menu). Three of the
+                four pillars were involved in this project. Inheritence was already mentioned, however polymorphism and encapsulation were also used.
+                Polymorphism was used in the Cell class constructors. Two constructors were provided, in which one did not need a parameter, while the other
+                required an int parameter. This allowed for flexible use of the cell class as it gave more uses for initialization. Lastly, encapsulation
+                was used in most classes where UI classes and Board/subclasses of Board had private variables, encapsulating that data and making it only
+                accessible through getter and setter methods. Abstraction was considered, however, there were not enough complex abstract methods in which
+                using an abstract class would be more efficient. Test-driven-development was used throughout the entirety of this project, in which tests were
+                created first, then the actual implementation of classes. This ensured that functions were always working properly, gave us insight
+                into functionality improvements and also helped us in integrating these methods in an application.
               </p>
               <p>
-              This was implemented using IntelliJ and Swing for the GUI system. The way that the Sudoku puzzles
-                were generated utilized a recursive algorithm that removed numbers one-by-one and checked for resolvability.
+              My contributions to this project involved creating tests, the UI system, and bug fixing. Initially, I created the column tests and half of the
+                board tests. I then moved onto UI development which involved creating a State Design Pattern that changed the application window based on the user's
+                button click input. It involved a Dashboard object that would render in the window and destroy the previous window.
+                I created the UI designs for the sudoku board and I created the most of the UI functionality which involved the main menu buttons and sudoku board buttons. The main menu
+                button just took the user to the difficulty screen. However the sudoku board buttons included the clear, main menu, and check button.
+                The clear button cleared the entire board by setting the TextAreas to blank states, the Main Menu button returned the user to the main menu, and the check button
+                returned a TextLabel that would given input on if the board was a correct solution, a valid state, or an invalid state, in which it would specify if the
+                a block, column, row, or input was invalid. There were many bugs that arose throughout this project, I was responsible for fixing all of the UI bugs.
+
+                If you are interested, here is the full project on GitHub:
+
               </p>
 
 
